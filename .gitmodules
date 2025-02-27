@@ -3,5 +3,5 @@
 	url = https://github.com/cu-ecen-aeld/assignment-autotest.git
 
 [submodule "pocky"]
-	path = pocky
+	path = poky
 	url = https://git.yoctoproject.org/poky
