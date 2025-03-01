@@ -9,6 +9,8 @@ jobs:
       full-test:
         runs-on: self-hosted
         steps:
+          - name: Install dependencies
+            run: sudo apt-get update && sudo apt-get install -y psmisc
           - uses: actions/checkout@v3
             with:
               clean: false
