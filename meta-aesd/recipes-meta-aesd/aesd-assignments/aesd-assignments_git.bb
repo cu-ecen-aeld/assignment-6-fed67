@@ -47,6 +47,10 @@ do_install () {
 	install -d ${D}${bindir}
 	install -m 0755 ${S}/aesdsocket ${D}${bindir}/	
 
-	install -d ${D}${sysconfdir}/rcS.d
-	install -m 0755 ${S}/aesdsocket-start-stop.sh ${D}${sysconfdir}/rcS.d/S99aesdsocket
+	install -d ${D}${sysconfdir}/init.d
+	install -m 0755 ${S}/aesdsocket-start-stop.sh ${D}${sysconfdir}/init.d/S99aesdsocket
+
+	install -d ${D}${sysconfdir}/rc5.d
+	install -m 0755 ${S}/aesdsocket-start-stop.sh ${D}${sysconfdir}/rc5.d/S99aesdsocket
 }
+FILES_${PN} += "${sysconfdir}/init.d/aesdsocket-start-stop.sh"
