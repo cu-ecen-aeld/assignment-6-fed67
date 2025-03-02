@@ -10,7 +10,7 @@ jobs:
         runs-on: self-hosted
         steps:
           - name: Install dependencies
-            run: apt-get update && apt-get install -y psmisc && apt-get install procps
+            run: sudo apt-get update && sudo apt-get install -y psmisc && sudo apt-get install procps
           - uses: actions/checkout@v3
             with:
               clean: false
